@@ -1,0 +1,57 @@
+.Card {
+    display: block;
+    flex-direction: column;
+    width: 210px;
+    height: 210px;
+    padding: 5px;
+    background-image: rgb(148, 148, 148);
+    margin: 10px;
+    border-radius: 5px;
+    
+}
+
+.text {
+    font-size: 8px;
+    color: rgb(255, 255, 255);
+    
+}
+
+.img{
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+
+.img1{
+    
+    width: 200px;
+    height: 200px;
+}
+
+
+.boton{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  width: 200px;
+  height: 25px; 
+  background-color: rgb(148, 148, 148);
+  color: white; 
+  border: 0px;
+ 
+      
+}
+
+.Card:hover {
+    background-color: #828282c9;
+    color: beige;
+    width: 350px;
+    height: 350px;
+    border-color: red;
+       
+  }
+
+.boton:hover {
+    background-color: rgb(255, 2, 2); 
+      
+  }

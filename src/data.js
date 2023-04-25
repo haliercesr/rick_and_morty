@@ -72,4 +72,10 @@ export default [
       },
       image: 'https://rickandmortyapi.com/api/character/avatar/5.jpeg',
    },
+
+
+
+
+
+   
 ];

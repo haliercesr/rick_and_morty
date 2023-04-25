@@ -15,6 +15,6 @@ export default function Cards(props) {
          onClose={() => window.alert('Emulamos que se cierra la card')}  
          
          />})}
-         <img src="universo.jpg"/>
+         
    </div>;
 }
