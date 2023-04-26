@@ -1,5 +1,5 @@
-import Card from './Card';
-import styles from './Cards.module.css'
+import Card from '..Card/Card.module.css';
+import styles from '../Cards/Cards.module.css'
 
 export default function Cards(props) {
    return <div className={styles.Cards}  >

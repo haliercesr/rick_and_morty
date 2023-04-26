@@ -1,16 +1,16 @@
-import styles from './Card.module.css';
+import styles from '../Card/Card.module.css';
 
 export default function Card(props) {
    return (
-      <div className={styles.Card}>
-          <div className={styles.boton}>
+      <div className={styles.DivCard}>
+          <div className={styles.Divboton}>
             <button onClick={props.onClose} >X</button>
           </div>
-          <div className={styles.img}>
-            <img src={props.image} className={styles.img1} alt='' /> 
+          <div className={styles.Divimg}>
+            <img src={props.image} alt='' /> 
           </div>
         
-          <div className={styles.text}> 
+          <div className={styles.Divtext}> 
          <h2 >{props.name}</h2>
          <h2 >{props.status}</h2>
          <h2 >{props.species}</h2>

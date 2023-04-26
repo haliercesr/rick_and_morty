@@ -1,8 +1,9 @@
 .Cards {
-    border-top: 50px;
+    
     display: flex;
     flex-direction: row;
-    justify-content: 15px;
+    justify-content: center;
+    margin-top: 50px;
     align-items: center;
     
     
