@@ -1,13 +1,7 @@
 .App{  
-    width: 1366px; 
-    height: 614px; 
-    background-image: url('../img/t4XrVGqJ-wallha.com.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    width: 100vw; 
+    height: 100vh; 
    
-
-
      
 }
 
