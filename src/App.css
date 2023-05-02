@@ -1,8 +1,13 @@
 .App{  
-    width: 100vw;
-    height: 100vh;
-    background-image: url("../img/outerspace-12.gif") ;
+    width: 1366px; 
+    height: 614px; 
+    background-image: url('../img/t4XrVGqJ-wallha.com.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
-    background-repeat: no-repeat; 
+    background-attachment: fixed;
+   
+
+
      
 }
+
