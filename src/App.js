@@ -1,7 +1,7 @@
 //Commons imports
 import { useState} from 'react';
 import axios from 'axios';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 //Styles
 import './App.css';
 //Components
@@ -9,6 +9,7 @@ import Cards from '../src/components/Cards/Cards'
 import NavBar from './components/NavBar/NavBar';
 import About from './components/About/About';
 import Detail from './components/Detail/Detail';
+import Form from './components/Form/Form';
 
 
 
@@ -52,12 +53,21 @@ function App() {
       //setCharacters(characters.filter((char)=>{char.id!==Number(id)}))
    }
 
+   
+   const location=useLocation()
+   function nav(){
+   if(location!=="/") return <NavBar onSearch={onSearch}/>
+   console.log(location)
+   }
+   
+
    return (
 
         <div className='App'>
-
-           <NavBar onSearch={onSearch}/>
+           
+           {nav}
            <Routes>
+            <Route path="/" element={<Form/>}/>
             <Route path="/home" element={<Cards characters={characters} onClose={onClose}/>} />
             <Route path="/About" element={<About/>}/>
             <Route path="/detail/:id" element={<Detail/>}/>

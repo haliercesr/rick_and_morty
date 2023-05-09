@@ -6,7 +6,7 @@ import styles from '../Detail/Detail.module.css'
 function Detail() {
 
     const { id } = useParams();
-
+   
     const[character,setCharacter]=useState([]);
     console.log(character)
 
