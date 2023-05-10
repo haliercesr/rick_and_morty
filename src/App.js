@@ -55,19 +55,17 @@ function App() {
 
    
    const location=useLocation()
-   function nav(){
-   if(location!=="/") return <NavBar onSearch={onSearch}/>
-   console.log(location)
+   const nav=()=>{
+   if(location.pathname!=="/") {return <NavBar onSearch={onSearch}/>}
    }
-   
 
    return (
 
         <div className='App'>
+           {nav()}
            
-           {nav}
            <Routes>
-            <Route path="/" element={<Form/>}/>
+            <Route path='/' element={<Form/>}/>
             <Route path="/home" element={<Cards characters={characters} onClose={onClose}/>} />
             <Route path="/About" element={<About/>}/>
             <Route path="/detail/:id" element={<Detail/>}/>
