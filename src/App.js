@@ -1,7 +1,7 @@
 //Commons imports
-import { useState} from 'react';
+import { useState,useEffect} from 'react';
 import axios from 'axios';
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation,useNavigate } from 'react-router-dom';
 //Styles
 import './App.css';
 //Components
@@ -13,7 +13,27 @@ import Form from './components/Form/Form';
 
 
 
-function App() {
+function App(props) {
+
+   const navigate = useNavigate()
+   const[access,setAccess] =useState(false)
+   const EMAIL="rick@gmail.com"
+   const PASSWORD="rick123"
+  
+   function login(userData) {
+      
+      console.log(userData.password)
+      if (userData.password === PASSWORD && userData.email === EMAIL) {
+         
+         setAccess(true);
+         navigate('/home');
+      }
+   }
+
+   useEffect(() => {
+      
+      !access && navigate('/');
+   }, [access,navigate]);
 
    const[characters,setCharacters]=useState([])
    const[Id,setId]=useState([])
@@ -65,7 +85,7 @@ function App() {
            {nav()}
            
            <Routes>
-            <Route path='/' element={<Form/>}/>
+            <Route path='/' element={<Form login={login}/>}/>
             <Route path="/home" element={<Cards characters={characters} onClose={onClose}/>} />
             <Route path="/About" element={<About/>}/>
             <Route path="/detail/:id" element={<Detail/>}/>

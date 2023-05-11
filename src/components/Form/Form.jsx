@@ -3,13 +3,18 @@ import {useState} from "react"
 import Validate from "./validation.js"
 
 export default function Form (props){
-
+  const{login}=props
     const [user,setData]=useState(
         {email:"",
         password:""
     })
 
     const [errors,setErrors]=useState({})
+
+    function handleSubmit(e){
+      e.preventDefault()
+      login(user)
+    }
 
     function handleChange(e){
         const property=e.target.value
@@ -33,7 +38,7 @@ export default function Form (props){
                <input type="password" name="password" onChange={handleChange}/>
                <p className={style.p1}>{errors.password}</p>
                </div>
-               <button>Submit</button>
+               <button onClick={handleSubmit}>Submit</button>
              </form>
            </div>;
    
