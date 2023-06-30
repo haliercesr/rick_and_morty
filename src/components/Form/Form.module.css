@@ -5,24 +5,47 @@
     height: 100vh; 
     justify-content: center;
     align-items: center;
-     
 }
 
+
+
+.videoform{
+    width: 100%;
+    height:99.5%;
+    object-fit: cover;
+    z-index: 1;
+   
+}
+
+
+
+
+
+
 .forms{
-    display: flex;
-    flex-direction: column;
+    position:absolute;
     width: 400px;
     height: 200px;
-    justify-content: center;
-    align-items: center;
     background-color: rgba(24, 24, 24, 0.5);
     border-radius: 20px;
     color: aliceblue;
+    z-index: 2;
 }
 
-.forms div{
-margin: 12px;
+.forms1{
+    display: none;
 }
+
+.FormConteiner{
+    
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
 
 .p1{
     margin: 0px;
@@ -30,3 +53,91 @@ margin: 12px;
     font-size: 1em;
     font-weight:600
 }
+
+.labelform1{
+    margin-top:7px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.labelform2{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom:1em
+}
+
+.labelform11{
+    margin-top: 7px;
+    margin-bottom:1em;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.labelform22{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+
+.label1{
+    margin:3px;
+    font-size: 17px;
+    
+}
+
+.input1{
+    border-radius: 5px;
+    height: 18px;
+}
+
+.input2{
+    border-radius: 5px;
+    height: 18px;
+}
+
+.label2{
+    margin:3px;
+    font-size: 17px;
+}
+
+.forms button{
+    margin-top: 7px;
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: cornflowerblue ;
+    border: 0px;
+    color: white;
+    font-weight:600
+}
+
+.buttonSubmit {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.buttonSubmit button{
+   
+        width: 65px;
+        height: 25px;
+        border-radius: 5px;
+        background-color: rgb(12, 209, 227);
+        border: 0px;
+        color: white;
+        font-size: 17px;
+    }   
+
+

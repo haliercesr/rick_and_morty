@@ -1,26 +1,49 @@
 
-.Divbarra {
+.Divbarra { 
+
 display: flex;
 flex-direction: row;
 align-items: center;
-justify-content: center;
-width: 330px;
+justify-content: left;
+width: 40%;
 height: 50px;
-background-color: rgb(148, 148, 148,0.7);
+background-color: rgba(15, 66, 15, 0.09);
 border-radius: 5px;
+
 }
 
-.Divbarra button{
-display: flex;
+.Divbarra label{
+    margin-left: 10px;
+    margin-right: 8px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    font-weight: 580;
+}
+
+.random{
 width:70px;
 height: 25px;
+border-radius: 5px;
+margin: 8px;
+margin-top:10px;
+cursor:pointer
 }
 
 .Divbarra input{
     display: flex;
     height: 25px;
+    border-radius: 5px;
 }
 
-.Divbarra button :hover{
+.random:hover{
 background-color: grey;
+}
+
+.lupa{
+    position: absolute;
+    background-color: transparent;
+    border: 0px;
+    left: 273px;
+    cursor:pointer
+    
 }

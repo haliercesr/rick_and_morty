@@ -10,7 +10,7 @@
     width: 500px;
     justify-content: center;
     align-items: center;
-    background-color: rgb(148, 148, 148,0.5);
+    background-color: rgba(49, 48, 48, 0.5);
     border-radius: 10px;
 }
 
@@ -18,7 +18,7 @@
     width: 350px;
     flex-direction: column;
     color:aliceblue;
-    background-color: rgba(58, 57, 57, 0.5);
+    background-color: rgba(109, 108, 108, 0.5);
     margin: 30px;
     border-radius: 5px;
 }

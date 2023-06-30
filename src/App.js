@@ -10,6 +10,7 @@ import NavBar from './components/NavBar/NavBar';
 import About from './components/About/About';
 import Detail from './components/Detail/Detail';
 import Form from './components/Form/Form';
+import audio from '../src/SD_NAVIGATE.wav';
 
 
 
@@ -19,6 +20,7 @@ function App(props) {
    const[access,setAccess] =useState(false)
    const EMAIL="rick@gmail.com"
    const PASSWORD="rick123"
+   const audio1 = document.getElementById("audio");
   
    function login(userData) {
       
@@ -26,7 +28,7 @@ function App(props) {
       if (userData.password === PASSWORD && userData.email === EMAIL) {
          
          setAccess(true);
-         navigate('/home');
+        
       }
    }
 
@@ -39,7 +41,7 @@ function App(props) {
    const[Id,setId]=useState([])
    
    const onSearch=(id)=>{
-   
+      audio1.play()
       let array=[]
       array=Id.filter((char)=>char===id)
       
@@ -64,6 +66,9 @@ function App(props) {
    
    
    const onClose =(id)=>{
+      
+      audio1.play();
+
       const characterfiltered=characters.filter((char)=>{return char.id !== Number(id)
       })
       setCharacters(characterfiltered)
@@ -78,14 +83,19 @@ function App(props) {
    const nav=()=>{
    if(location.pathname!=="/") {return <NavBar onSearch={onSearch}/>}
    }
+   
 
    return (
+          
 
-        <div className='App'>
+        <div className="App">
+           <audio id="audio" controls>
+           <source type="audio/wav" src={audio}/>
+           </audio>
            {nav()}
            
            <Routes>
-            <Route path='/' element={<Form login={login}/>}/>
+            <Route path='/' element={<Form login={login} SubmitSound={audio1} access={access} navigate={navigate}/>}/>
             <Route path="/home" element={<Cards characters={characters} onClose={onClose}/>} />
             <Route path="/About" element={<About/>}/>
             <Route path="/detail/:id" element={<Detail/>}/>

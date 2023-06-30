@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import styles from '../SearchBar/SearchBar.module.css'
+import '@fortawesome/fontawesome-free/css/all.css'
+
 
 export default function SearchBar(props) {
    const {onSearch}=props
@@ -11,9 +13,13 @@ export default function SearchBar(props) {
    
    return (
       <div className={styles.Divbarra}>
-          <input onChange={handleChange} type='search' placeholder="1,2,3,4,..." value={id}/>
-         <button  onClick={()=>{onSearch(id)}}>Agregar</button>
-         <button  onClick={()=>{onSearch(Math.floor(Math.random()*(826+1)+1))}} >Random</button>
+         <label>ID de personaje</label>
+          <input type="search" id="bt" onChange={handleChange} placeholder="1,2,3,4,..." value={id}/>
+         <button  className={styles.lupa} onClick={()=>{
+            document.querySelector("#bt").value=''
+            onSearch(id)
+         }}>{<i class="fa-sharp fa-solid fa-magnifying-glass"></i>}</button>
+         <button  className={styles.random} onClick={()=>{onSearch(Math.floor(Math.random()*(826+1)+1))}} >Random</button>
       </div>
    );
 }

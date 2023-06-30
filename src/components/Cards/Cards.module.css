@@ -1,11 +1,18 @@
 .Cards {
     
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 50px;
     align-items: center;
+    width: 100%;
+    min-height: 100%;
+    background-image: url('../../../img/fotor_2023-5-2_12_16_33.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 90px;
     
     
 }
+
 
