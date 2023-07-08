@@ -20,7 +20,7 @@
 #SkipButton {
     position: absolute;
     z-index: 2;
-    right: 45%;
+    right: 30%;
     bottom: 5%;
     cursor: pointer;
     background-color: transparent;
@@ -30,9 +30,6 @@
     border: 0px;
     padding: 0px;
 }
-
-
-
 
 
 

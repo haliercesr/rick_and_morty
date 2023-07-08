@@ -59,7 +59,7 @@ export default function Form(props) {
   return <div className={style.contenedor}>
 
 
-    <video className={style.videoform} ref={videoRef} onEnded={handleVideoEnd} controls onTimeUpdate={handleTimeUpdate}>
+    <video className={style.videoform} ref={videoRef} onEnded={handleVideoEnd} onTimeUpdate={handleTimeUpdate}>
       <source src={video} type="video/mp4" />
       Tu navegador no soporta la reproducción de videos HTML5.
     </video>
@@ -67,7 +67,7 @@ export default function Form(props) {
 
       playVideo())}
 
-     {access && videoRef.current && currentTime<6?<button onClick={skipVideo} id={style.SkipButton}>{">>>SKIP<<<"}</button>:null}
+     {access && videoRef.current && currentTime<6? <button onClick={skipVideo} id={style.SkipButton}>{">>>SKIP<<<"}</button>:null}
 
     <form className={access ? style.forms1 : style.forms}>
       <div className={style.FormConteiner}>
