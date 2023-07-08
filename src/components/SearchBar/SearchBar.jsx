@@ -14,7 +14,7 @@ export default function SearchBar(props) {
    return (
       <div className={styles.Divbarra}>
          <label>ID de personaje</label>
-          <input type="search" id="bt" onChange={handleChange} placeholder="1,2,3,4,..." value={id}/>
+          <input type="text" id="bt" onChange={handleChange} placeholder="1,2,3,4,..." />
          <button  className={styles.lupa} onClick={()=>{
             document.querySelector("#bt").value=''
             onSearch(id)

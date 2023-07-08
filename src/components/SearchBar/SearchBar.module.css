@@ -15,25 +15,36 @@ border-radius: 5px;
 .Divbarra label{
     margin-left: 10px;
     margin-right: 8px;
-    font-size: 14px;
+    font-size: 15px;
     color: rgb(255, 255, 255);
     font-weight: 580;
 }
 
-.random{
-width:70px;
-height: 25px;
-border-radius: 5px;
+.Divbarra .random{
 margin: 8px;
 margin-top:10px;
-cursor:pointer
+background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+color: rgb(255, 255, 255);
+border-radius: 10em;
+font-size: 14px;
+font-weight: 580;
+padding: 0.3em 1.2em;
+cursor: pointer;
+transition: all 0.3s ease-in-out;
+border: 1px solid black;
+box-shadow: 0 0 0 0 black;
 }
 
-.Divbarra input{
-    display: flex;
-    height: 25px;
-    border-radius: 5px;
-}
+.Divbarra .random:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
+  };
+  
+.Divbarra .random:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+  };
+
 
 .random:hover{
 background-color: grey;

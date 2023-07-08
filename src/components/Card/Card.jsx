@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { useState, useEffect } from 'react';
 
 
+
 function Card(props) {
    const{onClose,name,status,species,gender,origin,image,id,addFavCard,removeFavCard,myFavorites}=props
    const[IsFav,setIsFav]=useState(false)
@@ -40,7 +41,10 @@ function Card(props) {
            <button className={styles.buttonFavorite} onClick={handleFavorite}>🤍</button>
             )
           }
-          <button className={styles.buttonONClose}onClick={()=>{onClose(id)}} >X</button>
+          <button className={styles.buttonONClose} onClick={()=>{
+            onClose(id)
+            }
+            } >X</button>
           
           </div>
           <Link to={`/detail/${id}`}>

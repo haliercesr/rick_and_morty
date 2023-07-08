@@ -11,6 +11,7 @@ export default function Form(props) {
       email: "",
       password: "",
     })
+  const[currentTime,setCurrent]=useState(0)
 
 
   const [errors, setErrors] = useState({})
@@ -39,12 +40,26 @@ export default function Form(props) {
     navigate("/home")
   };
 
+  //Primero definimos un estado igual a cero llamando currentTime, despues con el atributo onTimeUpdate que se ejecuta cada 1 segundo vamos actualizando el estado currentTime, asi podemos obtener el tiempo real de reproduccion.
+  const handleTimeUpdate=()=>{   
+    const videoElement = videoRef.current;
+    if (videoElement) {
+      setCurrent(videoElement.currentTime);
+  }
+  }
 
+  const skipVideo = () => {
+    const videoElement = videoRef.current;
+    if (videoElement) {
+      const skipTime = 6; // Establece el tiempo en segundos para saltar
+      videoElement.currentTime = skipTime;
+    }
+  };
 
   return <div className={style.contenedor}>
 
 
-    <video className={style.videoform} ref={videoRef} onEnded={handleVideoEnd}>
+    <video className={style.videoform} ref={videoRef} onEnded={handleVideoEnd} controls onTimeUpdate={handleTimeUpdate}>
       <source src={video} type="video/mp4" />
       Tu navegador no soporta la reproducción de videos HTML5.
     </video>
@@ -52,6 +67,7 @@ export default function Form(props) {
 
       playVideo())}
 
+     {access && videoRef.current && currentTime<6?<button onClick={skipVideo} id={style.SkipButton}>{">>>SKIP<<<"}</button>:null}
 
     <form className={access ? style.forms1 : style.forms}>
       <div className={style.FormConteiner}>

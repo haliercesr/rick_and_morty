@@ -2,6 +2,9 @@
 import { useState,useEffect} from 'react';
 import axios from 'axios';
 import { Route, Routes, useLocation,useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { removeFav } from './components/redux/actions/actions'; 
+
 //Styles
 import './App.css';
 //Components
@@ -11,6 +14,8 @@ import About from './components/About/About';
 import Detail from './components/Detail/Detail';
 import Form from './components/Form/Form';
 import audio from '../src/SD_NAVIGATE.wav';
+import Favorites from './components/Favorites/Favorites';
+
 
 
 
@@ -21,7 +26,9 @@ function App(props) {
    const EMAIL="rick@gmail.com"
    const PASSWORD="rick123"
    const audio1 = document.getElementById("audio");
-  
+   const dispatch=useDispatch()
+   
+
    function login(userData) {
       
       console.log(userData.password)
@@ -68,20 +75,23 @@ function App(props) {
    const onClose =(id)=>{
       
       audio1.play();
-
+      
+      if (location.pathname==="/Favorites") dispatch(removeFav(id))
+      if (location.pathname==="/home") {
+      dispatch(removeFav(id))
       const characterfiltered=characters.filter((char)=>{return char.id !== Number(id)
       })
       setCharacters(characterfiltered)
       const idfiltrado=Id.filter((char)=>{return char===id})
-      console.log(idfiltrado)
       setId(idfiltrado)
       //setCharacters(characters.filter((char)=>{char.id!==Number(id)}))
+   }
    }
 
    
    const location=useLocation()
    const nav=()=>{
-   if(location.pathname!=="/") {return <NavBar onSearch={onSearch}/>}
+   if(location.pathname!=="/") {return <NavBar SubmitSound={audio1} onSearch={onSearch}/>}
    }
    
 
@@ -99,6 +109,7 @@ function App(props) {
             <Route path="/home" element={<Cards characters={characters} onClose={onClose}/>} />
             <Route path="/About" element={<About/>}/>
             <Route path="/detail/:id" element={<Detail/>}/>
+            <Route path="/favorites" element={<Favorites onClose={onClose} />}></Route>
            </Routes>
 
         </div>

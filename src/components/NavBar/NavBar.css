@@ -1,0 +1,204 @@
+/*NAVBAR*/
+.nav {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    border-radius: 5px;
+}
+
+#HeartNav{
+    color:red;
+}
+
+
+/*HOME*/
+
+#bt1Home {
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    /* Variables */
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 14px;
+    font-weight: 580;
+    padding: 0.3em 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+
+#bt1Home:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
+}
+
+;
+
+#bt1Home:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+
+#bt3Home {
+    position: absolute;
+    top: 13px;
+    left: 415px;
+
+    /* Variables */
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 14px;
+    font-weight: 580;
+    padding: 0.3em 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+
+#bt3Home:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
+}
+
+;
+
+#bt3Home:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+/*FAVORITE*/
+
+#bt1Favorite {
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    /* Variables */
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 14px;
+    font-weight: 580;
+    padding: 0.3em 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+
+#bt1Favorite:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
+}
+
+;
+
+#bt1Favorite:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+#bt2Favorite {
+    position: absolute;
+    top: 13px;
+    left: 15px;
+
+    /* Variables */
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 14px;
+    font-weight: 580;
+    padding: 0.3em 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+
+#bt2Favorite:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
+}
+
+;
+
+#bt2Favorite:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+/*ABOUT*/
+
+#bt2About {
+    position: absolute;
+    top: 13px;
+    left: 15px;
+
+    /* Variables */
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 14px;
+    font-weight: 580;
+    padding: 0.3em 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+
+#bt2About:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
+}
+
+;
+
+#bt2About:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+#bt3About {
+    position: absolute;
+    top: 13px;
+    left: 100px;
+
+    /* Variables */
+    background-image: linear-gradient(to top, #1c371a, #1d4c1b, #1c6219, #197914, #129007);
+    color: rgb(255, 255, 255);
+    border-radius: 10em;
+    font-size: 14px;
+    font-weight: 580;
+    padding: 0.3em 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+
+#bt3About:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
+}
+
+;
+
+#bt3About:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}

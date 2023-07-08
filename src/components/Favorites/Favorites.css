@@ -1,31 +1,20 @@
-.Cards {
-    
-    display: flex;
-    flex-direction: column;
+.ContainerFavorites {
+    display: block;
     justify-content: center;
     align-items: top;
     max-width: 100vw;
+    width: 100%;
     min-height: 100vh;
     background-image: url('../../../img/fotor_2023-5-2_12_16_33.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
-    
-    
-    
 }
 
-.CardsConteinerH{
-   
-    margin-top: 100px;
-    min-height: 80vh;
+.CardsConteinerFavorite{
+    padding-top: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: top;
-    max-width: 100vw;
-    
-    
 }
-
