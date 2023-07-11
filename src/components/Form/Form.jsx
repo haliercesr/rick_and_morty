@@ -67,9 +67,9 @@ export default function Form(props) {
 
       playVideo())}
 
-     {access && videoRef.current && currentTime<6? <button onClick={skipVideo} id={style.SkipButton}>{">>>SKIP<<<"}</button>:null}
+     {access && videoRef.current && currentTime<6? <div className={style.ConteinerSkiButton}><button onClick={skipVideo} id={style.SkipButton}>{">>>SKIP<<<"}</button></div>:null}
 
-    <form className={access ? style.forms1 : style.forms}>
+    <form className={access ? style.forms1 : style.forms} onSubmit={handleSubmit}>
       <div className={style.FormConteiner}>
         <div className={errors.email ? style.labelform1 : style.labelform11}>
           <label className={style.label1}>Email</label>
@@ -82,7 +82,7 @@ export default function Form(props) {
           <p className={style.p1}>{errors.password}</p>
         </div>
         <div className={style.buttonSubmit}>
-          <button onClick={handleSubmit}>Iniciar</button>
+          <button type="submit">Iniciar</button>
         </div>
       </div>
 

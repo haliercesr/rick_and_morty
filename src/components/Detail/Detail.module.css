@@ -6,7 +6,7 @@
    width: 100%;
    min-height: 100%;
    background-image: url('../../../img/fotor_2023-5-2_12_16_33.jpg');
-   background-size: cover;
+   background-size: 100% 100%;
    background-repeat: no-repeat;
    background-attachment: fixed;
    padding-top: 90px;
@@ -59,4 +59,21 @@
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     height: 300
+}
+
+@media only screen and (max-width: 500px) {
+    .DetailContainerCard{
+    
+        display: flex;
+        justify-content: center;
+        align-items: top;
+        width: 100%;
+        min-height: 100%;
+        background-image: url('../../../img/images.jpeg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        padding-top: 90px;
+     }
+ 
 }
